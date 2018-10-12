@@ -72,9 +72,17 @@ html, body {
   }
 
   // This is the logo at the top of the ToC
+  .logo-wrapper {
+    width: 100%;
+    background: white;
+  }
+
   .logo {
     display: block;
     max-width: 100%;
+    padding: 10px;
+    width: 185px;
+    height: 30px;
     margin-bottom: $logo-margin;
   }
 
@@ -558,6 +566,7 @@ html, body {
 
 @media (max-width: $tablet-width) {
   .toc-wrapper {
+    background: #ffffff;
     left: -$nav-width;
 
     &.open {
