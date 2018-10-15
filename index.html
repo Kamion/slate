@@ -298,7 +298,8 @@ You must replace <code>[developer_token]</code> with your personal API key.
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
   </span><span class="s2">"depart_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2011-08-30T09:30:16.768-04:00"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"hazmat"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
+  </span><span class="s2">"hazmat"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"team"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="w">
 </span><span class="p">}</span><span class="w">
 </span></code></pre>
 <blockquote>
@@ -423,7 +424,7 @@ You must replace <code>[developer_token]</code> with your personal API key.
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>POST https://api.pathsquad.com/route</code></p>
 <h3 id='request-body'>Request Body</h3>
-<p>Provide the stops in the order you want them to appear in the route. The <code>depart_at</code> property is taken into account when calculating the ETA for the route. You can leave it empty and the service will take the current local time based on departure location as a starting time. The string format is RFC3339.</p>
+<p>Provide the stops in the order you want them to appear in the route. The <code>depart_at</code> property is taken into account when calculating the ETA for the route. You can leave it empty and the service will take the current local time based on departure location as a starting time. The string format is RFC3339. The property <code>team</code> will change the ETA, taking into account two drivers for the load.</p>
 <h2 id='get-mileage-breakdown-per-state'>Get mileage breakdown per state</h2><pre class="highlight shell tab-shell"><code>curl <span class="s2">"https://api.pathsquad.com/ifta/&lt;ID&gt;"</span>
   -H <span class="s2">"Authorization: Bearer [developer_token]"</span>
 </code></pre>
