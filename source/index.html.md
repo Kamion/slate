@@ -69,7 +69,8 @@ curl "https://api.pathsquad.com/route"
     }
   ],
   "depart_at": "2011-08-30T09:30:16.768-04:00",
-  "hazmat": false
+  "hazmat": false,
+  "team": false
 }
 ```
 
@@ -200,7 +201,7 @@ The route response can be used as is in the [MapBox mobile SDK](https://www.mapb
 
 ### Request Body
 
-Provide the stops in the order you want them to appear in the route. The `depart_at` property is taken into account when calculating the ETA for the route. You can leave it empty and the service will take the current local time based on departure location as a starting time. The string format is RFC3339.
+Provide the stops in the order you want them to appear in the route. The `depart_at` property is taken into account when calculating the ETA for the route. You can leave it empty and the service will take the current local time based on departure location as a starting time. The string format is RFC3339. The property `team` will change the ETA, taking into account two drivers for the load.
 
 ## Get mileage breakdown per state
 
